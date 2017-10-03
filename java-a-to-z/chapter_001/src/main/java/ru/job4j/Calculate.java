@@ -12,11 +12,18 @@ public class Calculate {
 *@param value line for output console 
 *@return String value.
 */
-  public String echo(String value) {
-   return String.format ("%s %s %s" , value, value, value);
+/**
+* Method echo.
+* @param name Your name.
+* @return Echo plus your name.
+*/
+public String echo(String name) {
+    return "Echo,echo,echo : " + name;
 }
     public static void main(String[] args)  {
      Calculate calc = new Calculate();
-     System.out.println(calc.echo("aah"));
+     System.out.println(calc.echo(""));
+	 
+
 }
 }
