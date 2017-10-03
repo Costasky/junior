@@ -1,22 +1,26 @@
 package ru.job4j;
-
-import org.junit.Test;
-import static org.hamcrest.core. Is. is;
-import static org.junit.Assert.*;
-
-   public class CalculateTest {
-     @Test
-       public void whenSetStopInEchoThenReturnThreeStops ()  {   
-       Calculate calc = new Calculate();
-        String result = calc.echo("stop");
-        assertThat(result, is("stop stop stop" ));
-}
-     @Test
-       public void whenSetNullInEchoThenReturnTwoSpaces ()  {   
-       Calculate calc = new Calculate();
-        String result = calc.echo("null");
-        assertThat(result, is("null null null"));
-}
-}
-
-
+	
+	import org.junit.Test;
+	import java.io.ByteArrayOutputStream;
+	import java.io.PrintStream;
+	import static org.hamcrest.core.Is.is;
+	import static org.junit.Assert.assertThat;
+	
+	/**
+	*Test
+	*@author Costa Thay (mailto:tsk6613881952@gmail.com)
+	*@version $Id$
+	*@since 0.1
+	*/
+	public class CalculateTest{
+		/**
+		*Test echo.
+		*/ @Test
+		public void whenTakenNameThenTreeEchoPlusName(){
+			String input = "Costa Thay";
+			String expect = "Echo,echo,echo : Costa Thay";
+			Calculate calc = new Calculate();
+			String result = calc.echo(input);
+			assertThat(result, is(expect));
+		}
+	}
